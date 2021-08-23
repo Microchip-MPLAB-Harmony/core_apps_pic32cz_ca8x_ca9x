@@ -263,11 +263,22 @@ void SERCOM3_SPI_CallbackRegister(SERCOM_SPI_CALLBACK callBack, uintptr_t contex
 bool SERCOM3_SPI_IsBusy(void)
 {
     bool isBusy = false;
-
-    /* if transmit is not complete or if the state flag is not set, SPI is busy */
-    isBusy = (((SERCOM3_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_TXC_Msk) == 0U) || sercom3SPIObj.transferIsBusy);
-
+	if ((sercom3SPIObj.txSize == 0U) && (sercom3SPIObj.rxSize == 0U))
+	{
+		/* This means no transfer has been requested yet; hence SPI is not busy. */
+		isBusy = false;
+	}
+	else
+	{
+        /* if transmit is not complete or if the state flag is not set, SPI is busy */
+        isBusy = (((SERCOM3_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_TXC_Msk) == 0U) || sercom3SPIObj.transferIsBusy);
+	}
     return isBusy;
+}
+
+bool SERCOM3_SPI_IsTransmitterBusy(void)
+{
+    return ((SERCOM3_REGS->SPIM.SERCOM_INTFLAG & SERCOM_SPIM_INTFLAG_TXC_Msk) == 0)? true : false;
 }
 
 // *****************************************************************************
