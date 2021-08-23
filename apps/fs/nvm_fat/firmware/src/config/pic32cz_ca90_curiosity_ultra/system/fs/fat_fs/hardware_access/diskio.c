@@ -148,10 +148,10 @@ DRESULT disk_read
 )
 {
     DRESULT result = RES_ERROR;
+
     uint32_t i = 0;
     uint32_t sector_aligned_index = 0;
     uint8_t (*sector_ptr)[SYS_FS_FAT_MAX_SS] = (uint8_t (*)[])buff;
-
 
     /* Use Aligned Buffer if input buffer is not aligned to cache line size */
     if (((uint32_t)buff & CACHE_ALIGN_CHECK) != 0)
