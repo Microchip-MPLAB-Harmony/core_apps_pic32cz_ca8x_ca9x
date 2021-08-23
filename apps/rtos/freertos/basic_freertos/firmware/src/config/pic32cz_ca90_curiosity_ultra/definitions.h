@@ -48,6 +48,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
@@ -55,9 +56,9 @@
 #include "peripheral/eic/plib_eic.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "bsp/bsp.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
+#include "bsp/bsp.h"
 #include "task1.h"
 #include "task2.h"
 #include "task3.h"
