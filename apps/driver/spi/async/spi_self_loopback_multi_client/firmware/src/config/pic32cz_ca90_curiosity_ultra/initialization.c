@@ -81,7 +81,7 @@ const DRV_SPI_PLIB_INTERFACE drvSPI0PlibAPI = {
     .writeRead = (DRV_SPI_PLIB_WRITE_READ)SERCOM2_SPI_WriteRead,
 
     /* SPI PLIB Transfer Status function */
-    .isBusy = (DRV_SPI_PLIB_IS_BUSY)SERCOM2_SPI_IsBusy,
+    .isTransmitterBusy = (DRV_SPI_PLIB_TRANSMITTER_IS_BUSY)SERCOM2_SPI_IsTransmitterBusy,
 
     /* SPI PLIB Callback Register */
     .callbackRegister = (DRV_SPI_PLIB_CALLBACK_REGISTER)SERCOM2_SPI_CallbackRegister,
@@ -120,11 +120,6 @@ const DRV_SPI_INIT drvSPI0InitData =
     /* SPI Client Objects Pool */
     .clientObjPool = (uintptr_t)&drvSPI0ClientObjPool[0],
 
-    /* DMA Channel for Transmit */
-    .dmaChannelTransmit = SYS_DMA_CHANNEL_NONE,
-
-    /* DMA Channel for Receive */
-    .dmaChannelReceive  = SYS_DMA_CHANNEL_NONE,
 
     /* SPI Queue Size */
     .transferObjPoolSize = DRV_SPI_QUEUE_SIZE_IDX0,
@@ -192,6 +187,8 @@ void SYS_Initialize ( void* data )
 
 
     SERCOM2_SPI_Initialize();
+
+    EVSYS_Initialize();
 
 	BSP_Initialize();
 
