@@ -128,9 +128,5 @@ children:
         attributes: {id: targetAttachmentID}
         children:
         - {type: Value, value: RTC_TMR}
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'true'}
 - type: ElementPosition
   attributes: {x: '365', y: '200', id: sys_time}

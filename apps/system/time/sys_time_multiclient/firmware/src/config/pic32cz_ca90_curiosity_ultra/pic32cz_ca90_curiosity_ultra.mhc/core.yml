@@ -792,6 +792,27 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '300000000'}
+  - type: Integer
+    attributes: {id: PLL0_CLOCK_FREQ1}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: PLL0_CLOCK_FREQ2}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
+  - type: Integer
+    attributes: {id: PLL0_CLOCK_FREQ3}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: '0'}
   - type: Boolean
     attributes: {id: PORT_GROUP_0}
     children:
@@ -827,6 +848,13 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x0'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_0_PIN_7_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: PORT_GROUP_0_PMUX3}
     children:
@@ -939,6 +967,55 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x0'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_21_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_22_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_24_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_25_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_26_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_27_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_1_PIN_28_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'false'}
   - type: String
     attributes: {id: PORT_GROUP_1_PMUX10}
     children:
@@ -1002,6 +1079,20 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '0x1'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_2_PIN_25_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
+  - type: Boolean
+    attributes: {id: PORT_GROUP_2_PIN_26_USED}
+    children:
+    - type: Values
+      children:
+      - type: Dynamic
+        attributes: {id: core, value: 'true'}
   - type: String
     attributes: {id: PORT_GROUP_2_PMUX12}
     children:
@@ -1380,51 +1471,6 @@ children:
       children:
       - type: Dynamic
         attributes: {id: core, value: '150000000'}
-  - type: Comment
-    attributes: {id: SYSTICK_COMMENT_SYS_TIME}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: visible}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_0}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_1}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: File
-    attributes: {id: SYSTICK_FILE_2}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
-  - type: Menu
-    attributes: {id: SYSTICK_MENU_0}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: visible}
-        children:
-        - {type: Value, value: 'false'}
   - type: String
     attributes: {id: SYSTICK_PERIOD}
     children:
@@ -1435,12 +1481,6 @@ children:
   - type: Float
     attributes: {id: SYSTICK_PERIOD_MS}
     children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: readOnly}
-        children:
-        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
@@ -1531,24 +1571,9 @@ children:
   - type: Boolean
     attributes: {id: systickEnable}
     children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: readOnly}
-        children:
-        - {type: Value, value: 'false'}
     - type: Values
       children:
       - type: Dynamic
         attributes: {id: core, value: 'false'}
-  - type: File
-    attributes: {id: systickSystemInitFile}
-    children:
-    - type: Attributes
-      children:
-      - type: Boolean
-        attributes: {id: enabled}
-        children:
-        - {type: Value, value: 'false'}
 - type: ElementPosition
   attributes: {x: '220', y: '18', id: core}
