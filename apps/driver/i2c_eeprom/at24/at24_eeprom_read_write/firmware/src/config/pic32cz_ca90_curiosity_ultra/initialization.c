@@ -163,6 +163,8 @@ void SYS_Initialize ( void* data )
 
 
 
+    EVSYS_Initialize();
+
     SERCOM5_I2C_Initialize();
 
 	BSP_Initialize();
