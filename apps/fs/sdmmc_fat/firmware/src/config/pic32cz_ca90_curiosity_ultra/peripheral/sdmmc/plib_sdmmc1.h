@@ -69,7 +69,7 @@ bool SDMMC1_IsDatLineBusy ( void );
 
 bool SDMMC1_IsCardAttached ( void );
 
-bool SDMMC1_ClockSet ( uint32_t clock);
+bool SDMMC1_ClockSet ( uint32_t speed);
 
 void SDMMC1_ClockEnable ( void );
 
@@ -78,6 +78,8 @@ void SDMMC1_ClockDisable ( void );
 uint16_t SDMMC1_CommandErrorGet (void);
 
 uint16_t SDMMC1_DataErrorGet (void);
+
+uint16_t SDMMC1_GetError(void);
 
 void SDMMC1_ErrorReset ( SDMMC_RESET_TYPE resetType );
 
