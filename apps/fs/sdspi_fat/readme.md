@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for PIC32CZ-CA90 family
+parent: Harmony 3 driver and system service application examples for PIC32CZ-CA80 family
 title: FAT filesystem using SD Card media 
 has_children: false
 has_toc: false
@@ -42,7 +42,7 @@ To build the application, refer to the following table and open the project usin
 
 | Project Name      | Description                                    |
 | ----------------- | ---------------------------------------------- |
-| pic32cz_ca90_curiosity_ultra.X    | MPLABX Project for [PIC32CZ-CA90 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)|
+| pic32cz_ca80_curiosity_ultra.X    | MPLABX Project for [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)|
 |||
 
 ## Setting up the hardware
@@ -51,10 +51,10 @@ The following table shows the target hardware for the application projects.
 
 | Project Name| Board|
 |:---------|:---------:|
-| pic32cz_ca90_curiosity_ultra.X    | [PIC32CZ-CA90 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)|
+| pic32cz_ca80_curiosity_ultra.X    | [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)|
 |||
 
-### Setting up [PIC32CZ-CA90 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)
+### Setting up [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)
 
 
 - To run the demo, the following additional hardware are required:
@@ -62,7 +62,7 @@ The following table shows the target hardware for the application projects.
     - One micro-sd card
 - Create a new JPEG file in the SD Card with name **FILE_TOO_LONG_NAME_EXAMPLE_123.JPG**
 - Insert the micro-SD Card in the [micro-sd Click](https://www.mikroe.com/microsd-click) board 
-- Install the [micro-sd Click](https://www.mikroe.com/microsd-click) board on to the mikroBUS header of [PIC32CZ-CA90 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)
+- Install the [micro-sd Click](https://www.mikroe.com/microsd-click) board on to the mikroBUS header of [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)
 - Connect the Debug USB port on the board to the computer using a micro USB cable
 
 ## Running the Application
@@ -75,7 +75,7 @@ The following table shows the target hardware for the application projects.
 
     | Board | LED Name | Switch Name |
     | ----- | -------- | ----------- |
-    |  [PIC32CZ-CA90 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/) | LED1 | SW0 |
+    |  [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/) | LED1 | SW0 |
     |||
 
 4. If LED is ON, Insert the SD Card on to your host PC
