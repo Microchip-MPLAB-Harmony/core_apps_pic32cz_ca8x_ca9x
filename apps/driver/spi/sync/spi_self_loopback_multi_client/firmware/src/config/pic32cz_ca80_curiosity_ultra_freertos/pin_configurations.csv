@@ -75,7 +75,7 @@
 90,PF08,,Available,,,,,,NORMAL
 91,PB30,,Available,,,,,,NORMAL
 92,PB31,,Available,,,,,,NORMAL
-93,PB24,SWITCH,SWITCH_AL,Digital,In,n/a,Yes,No,NORMAL
+93,PB24,SWITCH0,SWITCH_AL,Digital,High Impedance,n/a,Yes,No,NORMAL
 94,PB25,APP_CLIENT1_CS,GPIO,Digital,Out,High,,,NORMAL
 95,PB26,APP_CLIENT2_CS,GPIO,Digital,Out,High,,,NORMAL
 96,PB12,,Available,,,,,,NORMAL
@@ -96,7 +96,7 @@
 116,PC22,,Available,,,,,,NORMAL
 117,PC07,,Available,,,,,,NORMAL
 118,PC08,,SERCOM2_PAD0,Digital,High Impedance,n/a,No,No,NORMAL
-119,PC23,,Available,,,,,,NORMAL
+119,PC23,SWITCH1,SWITCH_AL,Digital,High Impedance,n/a,Yes,No,NORMAL
 120,PC24,,Available,,,,,,NORMAL
 121,PC09,,SERCOM2_PAD1,Digital,High Impedance,n/a,No,No,NORMAL
 122,PC25,,Available,,,,,,NORMAL
