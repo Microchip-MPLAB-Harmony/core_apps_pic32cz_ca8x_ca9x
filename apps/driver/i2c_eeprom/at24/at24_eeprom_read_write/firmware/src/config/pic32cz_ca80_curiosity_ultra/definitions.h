@@ -54,12 +54,12 @@
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/sercom/i2c_master/plib_sercom5_i2c_master.h"
+#include "bsp/bsp.h"
 #include "system/int/sys_int.h"
 #include "system/ports/sys_ports.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "bsp/bsp.h"
 #include "app.h"
 
 
