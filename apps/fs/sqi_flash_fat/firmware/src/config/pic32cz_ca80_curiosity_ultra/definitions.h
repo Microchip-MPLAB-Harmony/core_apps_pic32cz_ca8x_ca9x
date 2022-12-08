@@ -60,12 +60,12 @@
 #include "peripheral/nvic/plib_nvic.h"
 #include "driver/memory/drv_memory.h"
 #include "peripheral/sqi/plib_sqi1.h"
+#include "bsp/bsp.h"
 #include "driver/sst26/drv_sst26.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
-#include "bsp/bsp.h"
 #include "app.h"
 
 
