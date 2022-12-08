@@ -43,8 +43,8 @@
                 <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h</itemPath>
               </logicalFolder>
               <logicalFolder name="f2" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom5_usart.h</itemPath>
                 <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom_usart_common.h</itemPath>
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.h</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f6" displayName="systick" projectFiles="true">
@@ -121,7 +121,6 @@
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/freqm.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/fuses.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/gclk.h</itemPath>
-            <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/hsm.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/mclk.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/mcramc.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/component/mlb.h</itemPath>
@@ -166,7 +165,6 @@
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/freqm.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/fuses.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/gclk.h</itemPath>
-            <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/hsm.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/mclk.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/mcramc.h</itemPath>
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/mlb.h</itemPath>
@@ -214,9 +212,9 @@
             <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/instance/ebi.h</itemPath>
           </logicalFolder>
           <logicalFolder name="f3" displayName="pio" projectFiles="true">
-            <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/pio/pic32cz8110ca90208.h</itemPath>
+            <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/pio/pic32cz8110ca80208.h</itemPath>
           </logicalFolder>
-          <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/pic32cz8110ca90208.h</itemPath>
+          <itemPath>../src/packs/PIC32CZ8110CA80208_DFP/pic32cz8110ca80208.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/app_i2c_eeprom.h</itemPath>
@@ -233,6 +231,7 @@
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/core.yml</itemPath>
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/dfp.yml</itemPath>
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/drv_i2c.yml</itemPath>
+        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/evsys.yml</itemPath>
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/GraphSettings.yml</itemPath>
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/HarmonyCore.yml</itemPath>
         <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/project.yml</itemPath>
@@ -291,8 +290,8 @@
               <logicalFolder name="f1" displayName="i2c_master" projectFiles="true">
                 <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/i2c_master/plib_sercom0_i2c_master.c</itemPath>
               </logicalFolder>
-              <logicalFolder name="f2" displayName="usart" projectFiles="true">
-                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom5_usart.c</itemPath>
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/peripheral/sercom/usart/plib_sercom1_usart.c</itemPath>
               </logicalFolder>
             </logicalFolder>
             <logicalFolder name="f6" displayName="systick" projectFiles="true">
@@ -344,14 +343,14 @@
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>ICD4Tool</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.10</languageToolchainVersion>
+        <languageToolchainVersion>4.20</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.0.14"/>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.0.17"/>
+        <pack name="CMSIS" vendor="ARM" version="5.8.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -1666,6 +1665,8 @@
         <property key="communication.interface" value="swd"/>
         <property key="communication.interface.jtag" value="2wire"/>
         <property key="communication.speed" value="2.000"/>
+        <property key="debugoptions.debug-startup" value="Use system settings"/>
+        <property key="debugoptions.reset-behaviour" value="Use system settings"/>
         <property key="debugoptions.simultaneous.debug" value="false"/>
         <property key="debugoptions.useswbreakpoints" value="false"/>
         <property key="freeze.timers" value="false"/>
@@ -1682,7 +1683,6 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-9fffffff"/>
-        <property key="memories.rww" value="true"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>
@@ -1695,6 +1695,7 @@
         <property key="programoptions.preserveprogram.ranges" value=""/>
         <property key="programoptions.preserveprogramrange" value="false"/>
         <property key="programoptions.preserveuserid" value="false"/>
+        <property key="programoptions.program.otpconfig" value="false"/>
         <property key="programoptions.programcalmem" value="false"/>
         <property key="programoptions.programuserotp" value="false"/>
         <property key="programoptions.testmodeentrymethod" value="VDDFirst"/>
@@ -1702,6 +1703,7 @@
                   value="toolpack.updateoptions.uselatestoolpack"/>
         <property key="toolpack.updateoptions.packversion"
                   value="Press to select which tool pack to use"/>
+        <property key="x.erase.key" value="0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF,0xFFFFFFFF"/>
       </pkob4hybrid>
     </conf>
   </confs>
