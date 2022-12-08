@@ -164,7 +164,7 @@ void TASK4_Tasks ( void )
         {
             /* Task4 is running (<-) now */
             xSemaphoreTake(uartMutexLock, portMAX_DELAY);
-            SERCOM5_USART_Write((uint8_t*)"                                Tsk4-P4 <-\r\n", 44);
+            SERCOM1_USART_Write((uint8_t*)"                                Tsk4-P4 <-\r\n", 44);
             xSemaphoreGive(uartMutexLock);
 
             /* Work done by task3 for 10 ticks */
@@ -173,7 +173,7 @@ void TASK4_Tasks ( void )
 
             /* Task4 is exiting (->) now */
             xSemaphoreTake(uartMutexLock, portMAX_DELAY);
-            SERCOM5_USART_Write((uint8_t*)"                                Tsk4-P4 ->\r\n", 44);
+            SERCOM1_USART_Write((uint8_t*)"                                Tsk4-P4 ->\r\n", 44);
             xSemaphoreGive(uartMutexLock);
         }
     }

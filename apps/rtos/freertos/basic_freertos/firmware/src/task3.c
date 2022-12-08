@@ -150,9 +150,9 @@ void TASK3_Tasks ( void )
     bool status = false;
     TickType_t timeNow;
 
-    SERCOM5_USART_ReadCallbackRegister(uartReadEventHandler, 0);
-    SERCOM5_USART_ReadThresholdSet(1);
-    SERCOM5_USART_ReadNotificationEnable(true, false);
+    SERCOM1_USART_ReadCallbackRegister(uartReadEventHandler, 0);
+    SERCOM1_USART_ReadThresholdSet(1);
+    SERCOM1_USART_ReadNotificationEnable(true, false);
 
     dataRxSemaphore = xSemaphoreCreateBinary();
 
@@ -168,11 +168,11 @@ void TASK3_Tasks ( void )
         {
             /* Task3 is running (<-) now */
             xSemaphoreTake(uartMutexLock, portMAX_DELAY);
-            SERCOM5_USART_Write((uint8_t*)"                      Tsk3-P3 <-\r\n", 34);
+            SERCOM1_USART_Write((uint8_t*)"                      Tsk3-P3 <-\r\n", 34);
             xSemaphoreGive(uartMutexLock);
 
             /* Toggle an LED if character received is 'L' or 'l' */
-            while (SERCOM5_USART_Read(&readByte, 1) == true)
+            while (SERCOM1_USART_Read(&readByte, 1) == true)
             {
                 if (readByte == 'L' || readByte == 'l')
                 {
@@ -186,7 +186,7 @@ void TASK3_Tasks ( void )
 
             /* Task3 is exiting (->) now */
             xSemaphoreTake(uartMutexLock, portMAX_DELAY);
-            SERCOM5_USART_Write((uint8_t*)"                      Tsk3-P3 ->\r\n", 34);
+            SERCOM1_USART_Write((uint8_t*)"                      Tsk3-P3 ->\r\n", 34);
             xSemaphoreGive(uartMutexLock);
         }
     }
