@@ -50,6 +50,7 @@
 #include <string.h>
 #include "interrupts.h"
 #include "plib_fcw.h"
+#include "device_cache.h"
 
 /* ************************************************************************** */
 /* ************************************************************************** */
@@ -199,6 +200,11 @@ bool FCW_RowWrite( uint32_t *data, uint32_t address )
     while(((FCW_REGS->FCW_STATUS & FCW_STATUS_BUSY_Msk)) != 0U)
 	{
         /* Do Nothing */        
+    }
+
+    if (DATA_CACHE_IS_ENABLED())
+    {
+        DCACHE_CLEAN_BY_ADDR(data, FCW_FLASH_ROWSIZE);
     }
 
     FCW_REGS->FCW_SRCADDR = (uint32_t )(data);
