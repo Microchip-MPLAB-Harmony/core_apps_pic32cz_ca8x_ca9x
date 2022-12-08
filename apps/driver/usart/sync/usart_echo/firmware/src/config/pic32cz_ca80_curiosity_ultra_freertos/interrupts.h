@@ -65,11 +65,7 @@ void BusFault_Handler (void);
 void UsageFault_Handler (void);
 void DebugMonitor_Handler (void);
 void xPortSysTickHandler (void);
-void DMA_PRI3_InterruptHandler (void);
-void DMA_PRI2_InterruptHandler (void);
-void DMA_PRI1_InterruptHandler (void);
-void DMA_PRI0_InterruptHandler (void);
-void SERCOM5_USART_InterruptHandler (void);
+void SERCOM1_USART_InterruptHandler (void);
 
 
 
