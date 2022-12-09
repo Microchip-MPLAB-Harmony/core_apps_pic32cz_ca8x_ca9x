@@ -15,7 +15,7 @@ compiler: XC32 (v4.20)
 
 modules:
     - {name: "core", version: "v3.11.1"}
-    - {name: "csp", version: "unknown"}
-    - {name: "dev_packs", version: "unknown"}
-    - {name: "bsp", version: "unknown"}
+    - {name: "csp", version: "v3.15.0-eng.1"}
+    - {name: "dev_packs", version: "v3.15.0-eng.1"}
+    - {name: "bsp", version: "v3.15.0-eng.1"}
 

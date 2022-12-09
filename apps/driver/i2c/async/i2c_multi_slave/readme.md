@@ -49,11 +49,9 @@ The following table shows the target hardware for the application projects.
 |||
 
 - To run the demo, the following additional hardware are required:
+
   - [IO1 Xplained Pro Extension Kit](https://www.microchip.com/developmenttools/ProductDetails/ATIO1-XPRO)
 
-  - The A2 address line of TWI must be soldered to GND. This is done to modify the address of the the EEPROM on IO1 Xplained Pro Extension Kit. The modification changes the address of the temperature sensor to 0x4B and the EEPROM to 0x50
-
-    ![output](images/io1_xplained_address_sel.png)
 
 ### Setting up [PIC32CZ-CA80 Curiosity Ultra board](https://www.microchip.com/developmenttools/ProductDetails/)
 
@@ -63,7 +61,7 @@ The following table shows the target hardware for the application projects.
 ## Running the Application
 
 1. Open the Terminal application (Ex.:Tera term) on the computer.
-2. Connect to the EDBG/Jlink Virtual COM port and configure the serial settings as follows:
+2. Connect to the PKOB4 Virtual COM port and configure the serial settings as follows:
     - Baud : 115200
     - Data : 8 Bits
     - Parity : None
