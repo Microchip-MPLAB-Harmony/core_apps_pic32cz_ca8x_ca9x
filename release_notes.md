@@ -3,7 +3,7 @@ title: Release notes
 nav_order: 99
 ---
 
-## Harmony 3 peripheral library application examples for PIC32CZ CA family  v3.0.0-eng.1
+## Harmony 3 peripheral library application examples for PIC32CZ CA family  v3.0.0-E1
 
 ### Development kit and demo application support
 
