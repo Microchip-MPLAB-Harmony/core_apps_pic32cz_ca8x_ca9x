@@ -40,8 +40,8 @@
 *******************************************************************************/
 // DOM-IGNORE-END
 
-#ifndef _BSP_H
-#define _BSP_H
+#ifndef BSP_H
+#define BSP_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -60,16 +60,19 @@
 // Section: BSP Macros
 // *****************************************************************************
 // *****************************************************************************
+#define pic32cz_ca80_curiosity_ultra
+#define BSP_NAME             "pic32cz_ca80_curiosity_ultra"
+
 
 
 /*** LED Macros for LED0 ***/
-#define LED0_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1 << 21)
-#define LED0_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1 << 21)
-#define LED0_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1 << 21)
+#define LED0_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 21)
+#define LED0_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 21)
+#define LED0_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 21)
 /*** LED Macros for LED1 ***/
-#define LED1_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1 << 22)
-#define LED1_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1 << 22)
-#define LED1_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1 << 22)
+#define LED1_Toggle()     (PORT_REGS->GROUP[1].PORT_OUTTGL = 1UL << 22)
+#define LED1_On()         (PORT_REGS->GROUP[1].PORT_OUTCLR = 1UL << 22)
+#define LED1_Off()        (PORT_REGS->GROUP[1].PORT_OUTSET = 1UL << 22)
 
 /*** SWITCH Macros for SWITCH1 ***/
 #define SWITCH1_Get()     ((PORT_REGS->GROUP[2].PORT_IN >> 23) & 0x01)
@@ -109,7 +112,6 @@
 
   Example:
     <code>
-    //Initialize the BSP
     BSP_Initialize();
     </code>
 
@@ -119,7 +121,7 @@
 
 void BSP_Initialize(void);
 
-#endif // _BSP_H
+#endif // BSP_H
 
 /*******************************************************************************
  End of File
