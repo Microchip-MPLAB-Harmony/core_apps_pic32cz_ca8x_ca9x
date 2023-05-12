@@ -158,8 +158,6 @@
 #pragma config FUSES_BOOTCFG1_BROM_BOOTCFGCRC2_BROM_BOOTCFGCRC = 0xffffffffU
 #pragma config FUSES_BOOTCFG1_BROM_BOOTCFGCRC3_BROM_BOOTCFGCRC = 0xffffffffU
 #pragma config FUSES_BOOTCFG1_BROM_PAGEEND_BROM_PAGEEND = 0xffffffffU
-#pragma config FUSES_DALCFG_DAL_CPU0 = 0xDB
-#pragma config FUSES_DALCFG_DAL_CPU1 = 0xDB
 #pragma config FUSES_USERCFG2_FSEQ_SEQNUM = 0x0U
 #pragma config FUSES_USERCFG2_FSEQ_SEQBAR = 0xffffU
 #pragma config FUSES_USERCFG2_AFSEQ_ASEQNUM = 0xffffU
@@ -273,19 +271,23 @@
 // Section: Driver Initialization Data
 // *****************************************************************************
 // *****************************************************************************
+/* Following MISRA-C rules are deviated in the below code block */
+/* MISRA C-2012 Rule 11.1 */
+/* MISRA C-2012 Rule 11.3 */
+/* MISRA C-2012 Rule 11.8 */
 // <editor-fold defaultstate="collapsed" desc="DRV_AT25 Initialization Data">
 
 /* SPI PLIB Interface Initialization for AT25 Driver */
-const DRV_AT25_PLIB_INTERFACE drvAT25PlibAPI = {
+static const DRV_AT25_PLIB_INTERFACE drvAT25PlibAPI = {
 
     /* SPI PLIB WriteRead function */
     .writeRead = (DRV_AT25_PLIB_WRITE_READ)SERCOM3_SPI_WriteRead,
 
     /* SPI PLIB Write function */
-    .write = (DRV_AT25_PLIB_WRITE)SERCOM3_SPI_Write,
+    .writeData = (DRV_AT25_PLIB_WRITE)SERCOM3_SPI_Write,
 
     /* SPI PLIB Read function */
-    .read = (DRV_AT25_PLIB_READ)SERCOM3_SPI_Read,
+    .readData = (DRV_AT25_PLIB_READ)SERCOM3_SPI_Read,
 
     /* SPI PLIB Transfer Status function */
     .isBusy = (DRV_AT25_PLIB_IS_BUSY)SERCOM3_SPI_IsBusy,
@@ -295,7 +297,7 @@ const DRV_AT25_PLIB_INTERFACE drvAT25PlibAPI = {
 };
 
 /* AT25 Driver Initialization Data */
-const DRV_AT25_INIT drvAT25InitData =
+static const DRV_AT25_INIT drvAT25InitData =
 {
     /* SPI PLIB API  interface*/
     .spiPlib = &drvAT25PlibAPI,
@@ -319,6 +321,7 @@ const DRV_AT25_INIT drvAT25InitData =
 };
 
 // </editor-fold>
+
 
 
 // *****************************************************************************
@@ -350,7 +353,7 @@ SYSTEM_OBJECTS sysObj;
 // *****************************************************************************
 // *****************************************************************************
 
-
+/* MISRAC 2012 deviation block end */
 
 /*******************************************************************************
   Function:
@@ -381,17 +384,26 @@ void SYS_Initialize ( void* data )
 
 	BSP_Initialize();
 
+
+    /* MISRAC 2012 deviation block start */
+    /* Following MISRA-C rules deviated in this block  */
+    /* MISRA C-2012 Rule 11.3 - Deviation record ID - H3_MISRAC_2012_R_11_3_DR_1 */
+    /* MISRA C-2012 Rule 11.8 - Deviation record ID - H3_MISRAC_2012_R_11_8_DR_1 */
+
     sysObj.drvAT25 = DRV_AT25_Initialize(DRV_AT25_INDEX, (SYS_MODULE_INIT *)&drvAT25InitData);
 
 
 
 
+    /* MISRAC 2012 deviation block end */
     APP_Initialize();
 
 
     NVIC_Initialize();
 
+
     /* MISRAC 2012 deviation block end */
+
 }
 
 
