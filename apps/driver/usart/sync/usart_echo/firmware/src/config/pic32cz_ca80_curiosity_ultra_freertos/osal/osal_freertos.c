@@ -370,7 +370,7 @@ OSAL_RESULT OSAL_SEM_Pend(OSAL_SEM_HANDLE_TYPE* semID, uint16_t waitMS)
   }
   else
   {
-    timeout = (TickType_t)(waitMS / portTICK_PERIOD_MS);
+    timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
   }
 
   if (xSemaphoreTake(*(SemaphoreHandle_t*)semID, timeout) == (int32_t)pdTRUE)
@@ -688,7 +688,7 @@ OSAL_RESULT OSAL_MUTEX_Lock(OSAL_MUTEX_HANDLE_TYPE* mutexID, uint16_t waitMS)
   }
   else
   {
-    timeout = (TickType_t)(waitMS / portTICK_PERIOD_MS);
+    timeout = ((TickType_t)waitMS / portTICK_PERIOD_MS);
   }
 
   if (xSemaphoreTake(*(SemaphoreHandle_t*)mutexID, timeout) == (int32_t)pdTRUE)
