@@ -54,13 +54,13 @@
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
-#include "peripheral/rtc/plib_rtc.h"
 #include "bsp/bsp.h"
-#include "system/time/sys_time.h"
+#include "peripheral/rtc/plib_rtc.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
 #include "system/debug/sys_debug.h"
+#include "system/time/sys_time.h"
 #include "app.h"
 
 
