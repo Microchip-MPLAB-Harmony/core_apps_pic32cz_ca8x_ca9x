@@ -42,6 +42,7 @@
 void vApplicationIdleHook( void );
 void vApplicationTickHook( void );
 void vAssertCalled( const char * pcFile, unsigned long ulLine );
+
 /*
 *********************************************************************************************************
 *                                          vApplicationStackOverflowHook()
@@ -100,7 +101,6 @@ void vApplicationStackOverflowHook( TaskHandle_t xTask, char *pcTaskName )
 * Note(s)     : none.
 *********************************************************************************************************
 */
-
 void vApplicationMallocFailedHook( void )
 {
    /* vApplicationMallocFailedHook() will only be called if
@@ -113,13 +113,13 @@ void vApplicationMallocFailedHook( void )
       FreeRTOSConfig.h, and the xPortGetFreeHeapSize() API function can be used
       to query the size of free heap space that remains (although it does not
       provide information on how the remaining heap might be fragmented). */
+
    taskDISABLE_INTERRUPTS();
    for( ;; )
    {
        /* Do Nothing */
-   }    
+   }
 }
-
 /*-----------------------------------------------------------*/
 
 void vApplicationIdleHook( void )
