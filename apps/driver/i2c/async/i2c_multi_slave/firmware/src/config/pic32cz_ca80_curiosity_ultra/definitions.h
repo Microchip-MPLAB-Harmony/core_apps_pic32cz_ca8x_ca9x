@@ -49,14 +49,14 @@
 #include <stddef.h>
 #include <stdbool.h>
 #include "peripheral/sercom/usart/plib_sercom1_usart.h"
-#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/sercom/i2c_master/plib_sercom0_i2c_master.h"
+#include "peripheral/evsys/plib_evsys.h"
 #include "peripheral/port/plib_port.h"
 #include "peripheral/clock/plib_clock.h"
 #include "peripheral/nvic/plib_nvic.h"
 #include "peripheral/systick/plib_systick.h"
-#include "driver/i2c/drv_i2c.h"
 #include "system/time/sys_time.h"
+#include "driver/i2c/drv_i2c.h"
 #include "system/console/sys_console.h"
 #include "system/console/src/sys_console_uart_definitions.h"
 #include "bsp/bsp.h"
