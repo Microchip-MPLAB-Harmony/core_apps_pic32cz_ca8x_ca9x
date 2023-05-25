@@ -48,7 +48,6 @@
 #include "device.h"
 
 
-
 // ****************************************************************************
 // ****************************************************************************
 // Section: Configuration Bits
@@ -134,13 +133,13 @@
 #pragma config FUSES_BOOTCFG1_FCR_CTRLA_RDBUFWS = 0xfU
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_VREGOUT = 0x2
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_OFFSTDBY = ON
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_LVSTDBY = 0x1
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_LVHIB = 0x1
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_SRAM_VLD = CLEAR
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_BKUP_VLD = CLEAR
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_CPEN = 0x7U
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOEN = SET
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_ULDOLEVEL = 0x3
-#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGEN = 0x7U
+#pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGEN = PLL_EN
 #pragma config FUSES_BOOTCFG1_RPMU_VREGCTRL_AVREGSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG1_PLL0_CTRL_ENABLE = SET
 #pragma config FUSES_BOOTCFG1_PLL0_CTRL_WRTLOCK = SET
@@ -238,13 +237,13 @@
 #pragma config FUSES_BOOTCFG2_FCR_CTRLA_RDBUFWS = 0xfU
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_VREGOUT = 0x2
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_OFFSTDBY = ON
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_LVSTDBY = 0x1
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_LVHIB = 0x1
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_SRAM_VLD = CLEAR
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_BKUP_VLD = CLEAR
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_CPEN = 0x7U
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOEN = SET
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_ULDOLEVEL = 0x3
-#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGEN = 0x7U
+#pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGEN = PLL_EN
 #pragma config FUSES_BOOTCFG2_RPMU_VREGCTRL_AVREGSTDBY = ONINSTDBY
 #pragma config FUSES_BOOTCFG2_PLL0_CTRL_ENABLE = SET
 #pragma config FUSES_BOOTCFG2_PLL0_CTRL_WRTLOCK = SET
@@ -278,10 +277,10 @@
 // <editor-fold defaultstate="collapsed" desc="DRV_SDMMC Instance 0 Initialization Data">
 
 /* SDMMC Client Objects Pool */
-static DRV_SDMMC_CLIENT_OBJ drvSDMMC0ClientObjPool[DRV_SDMMC_CLIENTS_NUMBER_IDX0];
+static DRV_SDMMC_CLIENT_OBJ drvSDMMC0ClientObjPool[DRV_SDMMC_IDX0_CLIENTS_NUMBER];
 
 /* SDMMC Transfer Objects Pool */
-static DRV_SDMMC_BUFFER_OBJ drvSDMMC0BufferObjPool[DRV_SDMMC_QUEUE_SIZE_IDX0];
+static DRV_SDMMC_BUFFER_OBJ drvSDMMC0BufferObjPool[DRV_SDMMC_IDX0_QUEUE_SIZE];
 
 static const DRV_SDMMC_PLIB_API drvSDMMC0PlibAPI = {
     .sdhostCallbackRegister = (DRV_SDMMC_PLIB_CALLBACK_REGISTER)SDMMC1_CallbackRegister,
@@ -309,15 +308,15 @@ static const DRV_SDMMC_INIT drvSDMMC0InitData =
 {
     .sdmmcPlib                      = &drvSDMMC0PlibAPI,
     .bufferObjPool                  = (uintptr_t)&drvSDMMC0BufferObjPool[0],
-    .bufferObjPoolSize              = DRV_SDMMC_QUEUE_SIZE_IDX0,
+    .bufferObjPoolSize              = DRV_SDMMC_IDX0_QUEUE_SIZE,
     .clientObjPool                  = (uintptr_t)&drvSDMMC0ClientObjPool[0],
-    .numClients                     = DRV_SDMMC_CLIENTS_NUMBER_IDX0,
-    .protocol                       = DRV_SDMMC_PROTOCOL_SUPPORT_IDX0,
-    .cardDetectionMethod            = DRV_SDMMC_CARD_DETECTION_METHOD_IDX0,
+    .numClients                     = DRV_SDMMC_IDX0_CLIENTS_NUMBER,
+    .protocol                       = DRV_SDMMC_IDX0_PROTOCOL_SUPPORT,
+    .cardDetectionMethod            = DRV_SDMMC_IDX0_CARD_DETECTION_METHOD,
     .cardDetectionPollingIntervalMs = 0,
     .isWriteProtectCheckEnabled     = false,
-    .speedMode                      = DRV_SDMMC_CONFIG_SPEED_MODE_IDX0,
-    .busWidth                       = DRV_SDMMC_CONFIG_BUS_WIDTH_IDX0,
+    .speedMode                      = DRV_SDMMC_IDX0_CONFIG_SPEED_MODE,
+    .busWidth                       = DRV_SDMMC_IDX0_CONFIG_BUS_WIDTH,
 	.sleepWhenIdle 					= false,
     .isFsEnabled                    = true,
 };
@@ -451,6 +450,7 @@ static const SYS_TIME_INIT sysTimeInitData =
 
 void SYS_Initialize ( void* data )
 {
+
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
@@ -496,9 +496,7 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
-
 }
-
 
 /*******************************************************************************
  End of File
