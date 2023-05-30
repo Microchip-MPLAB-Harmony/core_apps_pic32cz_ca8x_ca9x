@@ -1,13 +1,13 @@
 ---
 parent: Harmony 3 driver and system service application examples for PIC32CZ-CA80 family
-title: USART driver synchronous - USART echo 
+title: USART driver asynchronous - USART echo 
 has_children: false
 has_toc: false
 ---
 
 [![MCHP](https://www.microchip.com/ResourcePackages/Microchip/assets/dist/images/logo.png)](https://www.microchip.com)
 
-# USART driver synchronous - USART echo
+# USART driver asynchronous - USART echo
 
 This example echoes the received characters over the console using the USART driver in synchronous mode.
 
