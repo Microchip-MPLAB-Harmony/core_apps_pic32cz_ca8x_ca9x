@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for PIC32CZ-CA80 family
+parent: Harmony 3 driver and system service application examples for PIC32CZ CA80 family
 title: Console Debug System Service using UART 
 has_children: false
 has_toc: false

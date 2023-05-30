@@ -1,5 +1,5 @@
 ---
-parent: Harmony 3 driver and system service application examples for PIC32CZ-CA80 family
+parent: Harmony 3 driver and system service application examples for PIC32CZ CA80 family
 title: FAT filesystem using SST26 Media 
 has_children: false
 has_toc: false
