@@ -67,6 +67,7 @@
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/device_vectors.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/user.h</itemPath>
           <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/configuration.h</itemPath>
+          <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/sys_tasks.h</itemPath>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="f2" displayName="packs" projectFiles="true">
@@ -203,18 +204,6 @@
       <itemPath>../src/app.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
-      <logicalFolder name="f1" displayName="pic32cz_ca80_curiosity_ultra.mhc" projectFiles="true">
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/BSP_PIC32CZ_CA80_Curiosity_Ultra.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/cmsis.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/core.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/dfp.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/drv_at24.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/GraphSettings.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/HarmonyCore.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/project.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/sercom5.yml</itemPath>
-        <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra.mhc/settings.yml</itemPath>
-      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/harmony-manifest-success.yml</itemPath>
       <itemPath>at24_eeprom_read_write_pic32cz_ca80_curiosity_ultra.mc3</itemPath>
