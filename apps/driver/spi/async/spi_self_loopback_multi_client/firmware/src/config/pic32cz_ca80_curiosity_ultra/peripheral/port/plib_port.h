@@ -65,15 +65,6 @@
 // *****************************************************************************
 // *****************************************************************************
 
-/*** Macros for CLIENT2_CS pin ***/
-#define CLIENT2_CS_Set()               (PORT_REGS->GROUP[2].PORT_OUTSET = ((uint32_t)1U << 24U))
-#define CLIENT2_CS_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = ((uint32_t)1U << 24U))
-#define CLIENT2_CS_Toggle()            (PORT_REGS->GROUP[2].PORT_OUTTGL = ((uint32_t)1U << 24U))
-#define CLIENT2_CS_OutputEnable()      (PORT_REGS->GROUP[2].PORT_DIRSET = ((uint32_t)1U << 24U))
-#define CLIENT2_CS_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = ((uint32_t)1U << 24U))
-#define CLIENT2_CS_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 24U)) & 0x01U)
-#define CLIENT2_CS_PIN                  PORT_PIN_PC24
-
 /*** Macros for CLIENT1_CS pin ***/
 #define CLIENT1_CS_Set()               (PORT_REGS->GROUP[2].PORT_OUTSET = ((uint32_t)1U << 10U))
 #define CLIENT1_CS_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = ((uint32_t)1U << 10U))
@@ -82,6 +73,15 @@
 #define CLIENT1_CS_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = ((uint32_t)1U << 10U))
 #define CLIENT1_CS_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 10U)) & 0x01U)
 #define CLIENT1_CS_PIN                  PORT_PIN_PC10
+
+/*** Macros for CLIENT2_CS pin ***/
+#define CLIENT2_CS_Set()               (PORT_REGS->GROUP[2].PORT_OUTSET = ((uint32_t)1U << 24U))
+#define CLIENT2_CS_Clear()             (PORT_REGS->GROUP[2].PORT_OUTCLR = ((uint32_t)1U << 24U))
+#define CLIENT2_CS_Toggle()            (PORT_REGS->GROUP[2].PORT_OUTTGL = ((uint32_t)1U << 24U))
+#define CLIENT2_CS_OutputEnable()      (PORT_REGS->GROUP[2].PORT_DIRSET = ((uint32_t)1U << 24U))
+#define CLIENT2_CS_InputEnable()       (PORT_REGS->GROUP[2].PORT_DIRCLR = ((uint32_t)1U << 24U))
+#define CLIENT2_CS_Get()               (((PORT_REGS->GROUP[2].PORT_IN >> 24U)) & 0x01U)
+#define CLIENT2_CS_PIN                  PORT_PIN_PC24
 
 // *****************************************************************************
 /* PORT Group
