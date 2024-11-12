@@ -46,7 +46,7 @@
 
 #include "configuration.h"
 #include "peripheral/port/plib_port.h"
-//#include "bsp/bsp.h"
+#include "bsp/bsp.h"
 #include "toolchain_specifics.h"
 
 // DOM-IGNORE-BEGIN
@@ -63,8 +63,8 @@ extern "C" {
 // *****************************************************************************
 // *****************************************************************************
 
-#define LED_ON()        LED0_Clear()
-#define LED_OFF()       LED0_Set()
+#define LED_ON()        LED0_On()
+#define LED_OFF()       LED0_Off()
 #define LED_TOGGLE()    LED0_Toggle()
 #define BUFFER_ATTRIBUTES       CACHE_ALIGN
 
