@@ -26,7 +26,7 @@ This content can also be downloaded using MCC content manager available as part 
 
 ## Code Examples
 
-Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CORE_APPS_PIC32CZ_CA80_CA90_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
+Click [here](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=CORE_APPS_PIC32CZ_CA8X_CA9X_INTRODUCTION&redirect=true) to view the online documentation of code examples hosted in this repository.
 
 To view the documentation offline, follow these steps:
  - Download the publication as a zip file from [here](https://onlinedocs.microchip.com/download/GUID-554900D8-C168-4A5A-A012-C43122A289D8?type=webhelp).
