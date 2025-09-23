@@ -221,9 +221,22 @@
       <itemPath>../src/task4.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles" displayName="Important Files" projectFiles="true">
+      <logicalFolder name="basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra" displayName="basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra" projectFiles="true">
+        <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/mcc-config.mc4</itemPath>
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/BSP_PIC32CZ_CA80_Curiosity_Ultra.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/FreeRTOS.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/HarmonyCore.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/cmsis.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/eic.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/evsys.yml</itemPath>
+          <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom1.yml</itemPath>
+        </logicalFolder>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/harmony-manifest-success.yml</itemPath>
-      <itemPath>basic_freertos_pic32cz_ca80_curiosity_ultra.mc3</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript" displayName="Linker Files" projectFiles="true">
@@ -325,7 +338,7 @@
         <targetPluginBoard/>
         <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.45</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>

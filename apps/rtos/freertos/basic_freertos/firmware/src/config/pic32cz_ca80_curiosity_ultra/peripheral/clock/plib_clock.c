@@ -61,6 +61,8 @@ static void PLL0_Initialize(void)
     /****************** PLL0 Initialization  *********************************/
 
     /* Configure PLL0 */
+    /* Disable PLL0 and clear PLL0 control register */
+    OSCCTRL_REGS->OSCCTRL_PLL0CTRL = 0U;
     OSCCTRL_REGS->OSCCTRL_PLL0REFDIV = OSCCTRL_PLL0REFDIV_REFDIV(12U);
     OSCCTRL_REGS->OSCCTRL_PLL0FBDIV = OSCCTRL_PLL0FBDIV_FBDIV(225U);
 
