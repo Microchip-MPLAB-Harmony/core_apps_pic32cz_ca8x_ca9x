@@ -228,29 +228,24 @@
                      displayName="i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom1.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/core.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_console.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/dfp.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/evsys.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/drv_i2c.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_console_0.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/cmsis.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_time.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom0.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/HarmonyCore.yml</itemPath>
-          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/drv_i2c_0.yml</itemPath>
           <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/BSP_PIC32CZ_CA80_Curiosity_Ultra.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/HarmonyCore.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/cmsis.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/drv_i2c.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/drv_i2c_0.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/evsys.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom0.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom1.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_console.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_console_0.yml</itemPath>
+          <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_time.yml</itemPath>
         </logicalFolder>
         <itemPath>i2c_multi_slave_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
-    </logicalFolder>
-    <logicalFolder name="LibraryFiles"
-                   displayName="LibraryFiles"
-                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -349,7 +344,7 @@
         <targetDevice>PIC32CZ8110CA80208</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>pkob4hybrid</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
@@ -357,6 +352,7 @@
       <packs>
         <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.4.158"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
       </packs>
       <ScriptingSettings>
       </ScriptingSettings>
@@ -425,23 +421,12 @@
         <property key="enable-symbols" value="true"/>
         <property key="enable-unroll-loops" value="false"/>
         <property key="exclude-floating-point" value="false"/>
-        <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
                   value="../src;../src/config/pic32cz_ca80_curiosity_ultra;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core/Include;../src/packs/PIC32CZ8110CA80208_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
-        <property key="keep-inline" value="false"/>
         <property key="make-warnings-into-errors" value="false"/>
-        <property key="oXC16gcc-errata" value=""/>
-        <property key="oXC16gcc-large-aggregate" value="false"/>
-        <property key="oXC16gcc-mpa-lvl" value=""/>
-        <property key="oXC16gcc-name-text-sec" value=""/>
-        <property key="oXC16gcc-near-chars" value="false"/>
-        <property key="oXC16gcc-no-isr-warn" value="false"/>
-        <property key="oXC16gcc-sfr-warn" value="false"/>
-        <property key="oXC16gcc-smar-io-lvl" value="1"/>
-        <property key="oXC16gcc-smart-io-fmt" value=""/>
         <property key="optimization-level" value="-O1"/>
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
@@ -1678,6 +1663,8 @@
                   value="${memories.instruction.ram.ranges}"/>
         <property key="memories.programmemory" value="true"/>
         <property key="memories.programmemory.ranges" value="0-9fffffff"/>
+        <property key="programmerToGoFilePath"
+                  value="D:/harmony/core_apps_pic32cz_ca/apps/driver/i2c/async/i2c_eeprom/firmware/pic32cz_ca80_curiosity_ultra.X/debug/pic32cz_ca80_curiosity_ultra/pic32cz_ca80_curiosity_ultra_ptg"/>
         <property key="programoptions.donoteraseauxmem" value="false"/>
         <property key="programoptions.eraseb4program" value="true"/>
         <property key="programoptions.pgmentry.voltage" value="low"/>

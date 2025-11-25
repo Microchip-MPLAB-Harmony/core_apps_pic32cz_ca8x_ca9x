@@ -2,8 +2,8 @@
 
 manifest_file_version: 1.0.0
 project: at25_eeprom_read_write_pic32cz_ca80_curiosity_ultra
-creation_date: 2025-09-23T10:06:35.631+00:00[UTC]
-operating_system: Windows 10
+creation_date: 2025-11-25T11:04:54.234+00:00[UTC]
+operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.25
 device_name: PIC32CZ8110CA80208

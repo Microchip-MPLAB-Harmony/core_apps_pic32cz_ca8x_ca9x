@@ -272,7 +272,6 @@
         <itemPath>spi_self_loopback_multi_client_pic32cz_ca80_curiosity_ultra_freertos_pic32cz_ca80_curiosity_ultra_freertos/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/harmony-manifest-success.yml</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra_freertos/pin_configurations.csv</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
@@ -397,7 +396,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="CMSIS" vendor="ARM" version="5.4.0"/>
+        <pack name="CMSIS" vendor="ARM" version="5.9.0"/>
         <pack name="PIC32CZ-CA80_DFP" vendor="Microchip" version="1.4.158"/>
       </packs>
       <ScriptingSettings>

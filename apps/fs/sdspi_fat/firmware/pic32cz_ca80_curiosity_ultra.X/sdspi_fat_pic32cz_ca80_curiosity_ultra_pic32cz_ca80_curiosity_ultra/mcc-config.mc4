@@ -30,7 +30,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\configuration.h
   hash: a06fb422cfd24528197be391e4f6e6d2ca88e8c12973bd995eb64eed56818487
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\definitions.h
-  hash: f4cc08eec7c392accb6cd2961cedc6b8d5b9d4f7539ec2d467c6eade18e13a3c
+  hash: a7ae725df9b39f5c268a9243b58fcf8912efe4d2eb74e60385d2a5d8dda8dbba
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\device.h
   hash: f555911b04a2ceae8443b5476194cb6072642886cf2c4b9c753b3e7fa8ad43d9
 - file: ..\src\config\pic32cz_ca80_curiosity_ultra\device_cache.h
