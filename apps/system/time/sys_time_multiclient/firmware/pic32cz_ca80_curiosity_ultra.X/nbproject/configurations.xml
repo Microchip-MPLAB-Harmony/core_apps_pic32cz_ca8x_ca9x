@@ -212,21 +212,25 @@
                      displayName="sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra"
                      projectFiles="true">
         <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/stdio.yml</itemPath>
           <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/BSP_PIC32CZ_CA80_Curiosity_Ultra.yml</itemPath>
-          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/HarmonyCore.yml</itemPath>
           <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/cmsis.yml</itemPath>
-          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/core.yml</itemPath>
-          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/dfp.yml</itemPath>
+          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom1.yml</itemPath>
+          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/HarmonyCore.yml</itemPath>
           <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/evsys.yml</itemPath>
           <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/rtc.yml</itemPath>
-          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sercom1.yml</itemPath>
-          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/stdio.yml</itemPath>
+          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/core.yml</itemPath>
+          <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/dfp.yml</itemPath>
           <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/components/sys_time.yml</itemPath>
         </logicalFolder>
         <itemPath>sys_time_multiclient_pic32cz_ca80_curiosity_ultra_pic32cz_ca80_curiosity_ultra/mcc-config.mc4</itemPath>
       </logicalFolder>
       <itemPath>Makefile</itemPath>
       <itemPath>../src/config/pic32cz_ca80_curiosity_ultra/pin_configurations.csv</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -428,6 +432,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -496,6 +501,7 @@
         <property key="use-indirect-calls" value="false"/>
       </C32CPP>
       <C32Global>
+        <property key="appendMe" value=""/>
         <property key="common-include-directories" value=""/>
         <property key="gp-relative-option" value=""/>
         <property key="legacy-libc" value="false"/>

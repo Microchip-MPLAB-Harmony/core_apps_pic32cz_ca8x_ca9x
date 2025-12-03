@@ -9,19 +9,7 @@ dependency:
   type: module
   version: ''
 - dependencyPackage: ''
-  name: CMSIS_5
-  type: package
-  version: 5.9.0
-- dependencyPackage: ''
   name: bsp
-  type: package
-  version: v3.23.0
-- dependencyPackage: ''
-  name: core
-  type: package
-  version: v3.15.5
-- dependencyPackage: ''
-  name: csp
   type: package
   version: v3.23.0
 customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
@@ -34,8 +22,8 @@ data:
     - children:
       - attributes:
           id: BSP_PIC32CZ_CA80_Curiosity_Ultra
-          x: '350'
-          y: '120'
+          x: '399'
+          y: '125'
         type: ElementPosition
       type: ElementPositions
     type: ComponentGraph
